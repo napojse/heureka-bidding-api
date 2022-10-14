@@ -1,7 +1,10 @@
 {
 	"name": "baraja-core/heureka-bidding-api",
 	"description": "Simple PHP API layer for Heureka.",
-	"homepage": "https://github.com/baraja-core/heureka-bidding-api",
+	"homepage": "https://github.com/napojse/heureka-bidding-api",
+	"replace": {
+        	"baraja-core/heureka-bidding-api": "self.version"
+    	},
 	"authors": [
 		{
 			"name": "Jan Barášek",
