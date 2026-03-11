@@ -25,20 +25,20 @@ final class Product extends BaseResponse
 
 	private string $statusName;
 
-	private ?int $rating;
+	private ?int $rating = null;
 
-	private ?int $ratingCount;
+	private ?int $ratingCount = null;
 
-	private ?int $reviewCount;
+	private ?int $reviewCount = null;
 
-	private ?int $producerId;
+	private ?int $producerId = null;
 
-	private ?string $producerName;
+	private ?string $producerName = null;
 
 	/** @var Shop[] */
 	private array $shops = [];
 
-	private ?Shop $topShop;
+	private ?Shop $topShop = null;
 
 	/** @var Shop[] */
 	private array $highlightedShops = [];

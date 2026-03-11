@@ -14,7 +14,7 @@ final class Offer extends BaseResponse
 
     private string $name;
 
-    private ?float $averageDeliveryDays;
+    private ?float $averageDeliveryDays = null;
 
     private float $price;
 

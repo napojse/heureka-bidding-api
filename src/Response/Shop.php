@@ -16,18 +16,18 @@ final class Shop extends BaseResponse
     private string $homepage;
 
     /** @var mixed[]|null */
-    private ?array $verifiedByCustomersStatus;
+    private ?array $verifiedByCustomersStatus = null;
 
     private bool $certifiedSeller;
 
     /** @var mixed|null */
-    private $shopOfTheYear;
+    private $shopOfTheYear = null;
 
-    private ?int $rating;
+    private ?int $rating = null;
 
-    private ?int $ratingCount;
+    private ?int $ratingCount = null;
 
-    private ?int $reviewCount;
+    private ?int $reviewCount = null;
 
     private bool $cashBackQuarantee;
 

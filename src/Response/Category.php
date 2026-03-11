@@ -9,7 +9,7 @@ final class Category extends BaseResponse
 {
 	private int $id;
 
-	private ?int $parentId;
+	private ?int $parentId = null;
 
 	private string $name;
 
@@ -17,7 +17,7 @@ final class Category extends BaseResponse
 
 	private bool $leaf;
 
-	private ?int $productCount;
+	private ?int $productCount = null;
 
 	private string $url;
 
