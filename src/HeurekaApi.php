@@ -247,14 +247,14 @@ final class HeurekaApi
 			$return = new CategoryIndexResponse($result['count'], $result['categories']);
 		} elseif ($method === self::METHOD_CATEGORY_GET) {
 			if (array_key_exists('category', $result) === true && $result['category'] === null) {
-				throw new \InvalidArgumentException('Category does not exist (because empty response).');
+				throw HeurekaCategoryMissingException::forEmptyResponse();
 			}
 			$return = new Category($result['category']);
 		} elseif ($method === self::METHOD_PRODUCT_INDEX) {
 			$return = new ProductIndexResponse($result['count'], $result['products']);
 		} elseif ($method === self::METHOD_PRODUCT_GET) {
 			if (array_key_exists('product', $result) === true && $result['product'] === null) {
-				throw new \InvalidArgumentException('Product does not exist (because empty response).');
+				throw HeurekaProductMissingException::forEmptyResponse();
 			}
 			$return = new Product($result['product']);
 		} else {

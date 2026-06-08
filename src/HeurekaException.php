@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Baraja\HeurekaBiddingApi;
 
 
-final class HeurekaException extends \Exception
+class HeurekaException extends \Exception
 {
 
 	/**
