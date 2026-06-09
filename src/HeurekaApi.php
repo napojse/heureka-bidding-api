@@ -62,7 +62,8 @@ final class HeurekaApi
 	 * @param string $locale ("cs" or "sk"), shortcut "cz" is too supported.
 	 * @return Response (method return specific final entity)
 	 * @throws HeurekaException
-	 */
+     * @throws \RuntimeException
+     */
 	public function run(string $method, array $params = [], string $locale = 'cs'): Response
 	{
 		return $this->mapResponseToObject($method, $this->processRawResponse($this->resolveEndpoint(strtolower($locale)), $locale, $method, $params));
@@ -237,7 +238,9 @@ final class HeurekaApi
 	/**
 	 * @param mixed[] $rawData
 	 * @return Response
-	 */
+     * @throws HeurekaException
+     * @throws \RuntimeException
+     */
 	private function mapResponseToObject(string $method, array $rawData): Response
 	{
 		$result = $rawData['result'];
